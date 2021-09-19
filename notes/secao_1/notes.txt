@@ -1,0 +1,10 @@
+extensões vscode
+- eslint
+- github theme
+- material icon theme
+
+configuração (ctrl + p)
+- theme -> color theme > github dark
+- icon -> material icons: activate icon theme
+
+cmder - terminal para windows (https://cmder.net/)

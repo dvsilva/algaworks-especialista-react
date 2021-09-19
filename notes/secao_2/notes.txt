@@ -1,0 +1,2 @@
+criar projeto
+npx create-react-app erjs --template typescript

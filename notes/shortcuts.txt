@@ -1,2 +1,3 @@
 ctrl + b -> toogle menu de arquivos a esquerda
 ctrl + ' -> toogle terminal
+ctrl + p -> abrir arquivo

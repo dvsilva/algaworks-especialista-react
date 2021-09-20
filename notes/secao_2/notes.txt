@@ -1,2 +1,6 @@
 criar projeto
 npx create-react-app erjs --template typescript
+
+babel online
+https://babeljs.io/
+

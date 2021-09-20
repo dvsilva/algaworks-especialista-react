@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css';
+import Card from './components/Card';
 import Clock from './components/Clock';
 import HelloWorld from './components/HelloWorld';
 import Person from './components/Person';
@@ -30,8 +31,18 @@ function App() {
       <Person />
       
       <Sidebar post={post} />
+
       <Post post={post} />
       <Post post={post} totalComments={12} />
+
+      <Card title="Card" align="right">
+        <Post post={post} totalComments={12} />
+      </Card>
+
+      <Card title="Card" align="left">
+        <Post post={post} totalComments={12} />
+      </Card>
+
 
       <header className="App-header">
         <ul>

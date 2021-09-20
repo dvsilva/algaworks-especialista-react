@@ -4,3 +4,6 @@ npx create-react-app erjs --template typescript
 babel online
 https://babeljs.io/
 
+styled components
+npm i styled-components
+npm i -D @types/styled-components

@@ -3,9 +3,31 @@ import "./App.css";
 import ScrollableBox, { ScrollableRef } from "./ScrollableBox";
 
 function App() {
+  const [names, setNames] = useState([
+    'Daniel', 'Thiago', 'Alex',
+    'Jão', 'Alex'
+  ])
+
   const boxRef = useRef<ScrollableRef>(null);
   const [content, setContent] = useState<string>();
   const [postId, setPostId] = useState(1);
+
+  // atende componentDidMount, componentDidUpdate e componentWillAmount
+  // executa no momento que o componente é montado, gera efeitos colaterais
+  useEffect(() => {
+    console.log('componente foi montado')
+    return () => {
+      console.log('componente foi desmontado')
+    }
+  }, [])
+
+   // executa no momento que o componente é inicializado e atualizado
+   useEffect(() => {
+    console.log('componente foi montado')
+    return () => {
+      console.log('componente foi desmontado')
+    }
+  }, [names])
 
   const fetchData = useCallback(
     async function () {
@@ -27,11 +49,27 @@ function App() {
 
   return (
     <div className="App">
-      {postId}
-      <ScrollableBox ref={boxRef} width={120} height={120}>
-        <p>{content || "carregando..."}</p>
-      </ScrollableBox>
-      <button onClick={() => setPostId(postId + 1)}>somar</button>
+      <header className="App-header">
+        <ul>
+          {
+            names.map((name, index) => <li key={index}>{name}</li>)
+          }
+        </ul>
+        <button
+          onClick={() => {
+            setNames([...names, 'jeremias'])
+          }}
+        >
+          adicionar jeremias
+        </button>
+        
+        {postId}
+        <ScrollableBox ref={boxRef} width={120} height={120}>
+          <p>{content || "carregando..."}</p>
+        </ScrollableBox>
+        <button onClick={() => setPostId(postId + 1)}>somar</button>
+
+      </header>
     </div>
   );
 }

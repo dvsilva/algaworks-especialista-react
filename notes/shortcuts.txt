@@ -1,3 +1,6 @@
 ctrl + b -> toogle menu de arquivos a esquerda
 ctrl + ' -> toogle terminal
 ctrl + p -> abrir arquivo
+
+scroll + arrastar pra baixo -> posiciona cursor em várias linhas em determinada posição
+ctrl + shift + seta para o lado -> seleciona até próxima vírgula 

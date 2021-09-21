@@ -19,7 +19,8 @@ export default function Card (props: CardProps) {
       {
         showButton &&
           <Button
-            onClick={() => setShowButton(false)}
+            onClick = {() => setShowButton(false)}
+            initializeClicked = {false}
           >
             Ver mais
           </Button>

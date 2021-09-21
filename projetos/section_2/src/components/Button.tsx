@@ -25,6 +25,20 @@ class Button extends Component<ButtonProps, ButtonState> {
     this.setState({ timerId })
   }
 
+  /*
+  componentDidUpdate (
+    prevProps: ButtonProps,
+    prevState: ButtonState
+  ) {
+    
+    console.log('anterior', prevState)
+    console.log('atual', this.state)
+
+    console.log('anterior', prevProps)
+    console.log('atual', this.props)
+  }
+  */
+
   componentWillUnmount () {
     if (this.state.timerId)
       clearInterval(this.state.timerId)

@@ -29,6 +29,7 @@ export default function Form () {
       value={form.name}
       onChange={handleInputChange}
     />
+
     <input
       placeholder="Sobrenome"
       type="text"
@@ -36,6 +37,7 @@ export default function Form () {
       value={form.lastName}
       onChange={handleInputChange}
     />
+
     <input
       placeholder="Email"
       type="email"
@@ -43,6 +45,7 @@ export default function Form () {
       value={form.email}
       onChange={handleInputChange}
     />
+
     <input
       placeholder="Senha"
       name="password"
@@ -50,13 +53,15 @@ export default function Form () {
       value={form.password}
       onChange={handleInputChange}
     />
+
     <input
       placeholder="Confirme sua senha"
       name="passwordConfirm"
-      type="passwordConfirm"
+      type="password"
       value={form.passwordConfirm}
       onChange={handleInputChange}
     />
+    
     <button type="submit">
       enviar formulário
     </button>

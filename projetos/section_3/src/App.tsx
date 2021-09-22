@@ -1,8 +1,33 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useReducer, useRef, useState } from "react";
 import "./App.css";
 import useCounter from "./hooks/useCounter";
 import PeopleList from "./PeopleList";
 import ScrollableBox, { ScrollableRef } from "./ScrollableBox";
+
+interface InitialState { count: number }
+
+type Action =
+  { type: 'DECREMENT' } |
+  { type: 'INCREMENT', payload: number }
+
+const initialState: InitialState = {
+  count: 1
+}
+
+function reducer (state: InitialState, action: Action): InitialState {
+  switch (action.type) {
+    case 'INCREMENT':
+      return {
+        count: state.count + action.payload
+      }
+    case 'DECREMENT':
+      return {
+        count: state.count -1 
+      }
+    default:
+      return state
+  }
+}
 
 function App() {
   {/*
@@ -31,6 +56,7 @@ function App() {
   }, [names])
   */}
 
+/* 
   const number = useCounter(9)
 
   // const counter = { current: 2 }
@@ -44,6 +70,10 @@ function App() {
       div.current.style.backgroundColor = 'green'
     }
   }, [])
+*/
+
+  const [state, dispatch] = useReducer(reducer, initialState)
+  
 /* 
   const boxRef = useRef<ScrollableRef>(null);
   const [content, setContent] = useState<string>();
@@ -69,7 +99,7 @@ function App() {
  */
 
   return (
-    <div className="App" ref={div}>
+    <div className="App" /* ref={div} */>
       {/* 
       <ul>
         {
@@ -85,14 +115,34 @@ function App() {
       </button>
       */}
 
-      { number }
+      {/*
+      { number } 
       
       <div style={{ backgroundColor: 'peachpuff' }}>
         { counter.current }
       </div>
 
       <PeopleList />
-      <PeopleList />
+      <PeopleList /> 
+      */}
+
+      <div style={{ backgroundColor: 'peachpuff' }}>
+        { state.count }
+      </div>
+      <button
+        onClick={() => {
+          dispatch({ type: 'INCREMENT', payload: 2 })
+        }}
+      >
+        acrescer
+      </button>
+      <button
+        onClick={() => {
+          dispatch({ type: 'DECREMENT' })
+        }}
+      >
+        diminuir
+      </button>
 
       {/*  
       { postId }

@@ -17,8 +17,7 @@ export default forwardRef<ScrollableRef, ScrollableBoxProps>((props, ref) => {
     () => ({
       scrollToBottom() {
         if (currentRef.current) {
-          currentRef.current.scrollTop =
-            currentRef.current?.scrollHeight
+          currentRef.current.scrollTop = currentRef.current?.scrollHeight
         }
       }
     }),

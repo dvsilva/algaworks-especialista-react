@@ -4,6 +4,7 @@ import useCounter from "./hooks/useCounter";
 import PeopleList from "./PeopleList";
 import ScrollableBox, { ScrollableRef } from "./ScrollableBox";
 
+/* 
 interface InitialState { count: number }
 
 type Action =
@@ -27,7 +28,8 @@ function reducer (state: InitialState, action: Action): InitialState {
     default:
       return state
   }
-}
+} 
+*/
 
 function App() {
   {/*
@@ -72,9 +74,8 @@ function App() {
   }, [])
 */
 
-  const [state, dispatch] = useReducer(reducer, initialState)
+ /*  const [state, dispatch] = useReducer(reducer, initialState) */
   
-/* 
   const boxRef = useRef<ScrollableRef>(null);
   const [content, setContent] = useState<string>();
   const [postId, setPostId] = useState(1);
@@ -96,7 +97,6 @@ function App() {
 
   // const data = Array(33_000_000).fill({ foo: "bar" });
   const data = useMemo(() => Array(33_000_000).fill({ foo: "bar" }), []);
- */
 
   return (
     <div className="App" /* ref={div} */>
@@ -126,6 +126,7 @@ function App() {
       <PeopleList /> 
       */}
 
+      {/* 
       <div style={{ backgroundColor: 'peachpuff' }}>
         { state.count }
       </div>
@@ -142,15 +143,16 @@ function App() {
         }}
       >
         diminuir
-      </button>
-
-      {/*  
+      </button> 
+      */}
+       
       { postId }
       <ScrollableBox ref={boxRef} width={120} height={120}>
         <p>{content || "carregando..."}</p>
       </ScrollableBox>
+      <button onClick={() => boxRef.current?.scrollToBottom()}>descer</button> 
       <button onClick={() => setPostId(postId + 1)}>somar</button> 
-      */}
+     
     </div>
   );
 }

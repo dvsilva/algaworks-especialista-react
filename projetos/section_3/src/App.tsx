@@ -1,8 +1,15 @@
-import { useCallback, useEffect, useMemo, useReducer, useRef, useState } from "react";
-import "./App.css";
-import useCounter from "./hooks/useCounter";
-import PeopleList from "./PeopleList";
-import ScrollableBox, { ScrollableRef } from "./ScrollableBox";
+import {
+  useCallback,
+  useEffect,
+  useMemo,
+  useReducer,
+  useRef,
+  useState,
+} from 'react';
+import './App.css';
+import useCounter from './hooks/useCounter';
+import PeopleList from './PeopleList';
+import ScrollableBox, { ScrollableRef } from './ScrollableBox';
 
 /* 
 interface InitialState { count: number }
@@ -32,14 +39,17 @@ function reducer (state: InitialState, action: Action): InitialState {
 */
 
 function App() {
-  {/*
+  {
+    /*
   const [names, setNames] = useState([
     'Daniel', 'Thiago', 'Alex',
     'Jão', 'Alex'
   ])
-  */}
+  */
+  }
 
-  {/* 
+  {
+    /* 
   // atende componentDidMount, componentDidUpdate e componentWillAmount
   // executa no momento que o componente é montado, gera efeitos colaterais
   useEffect(() => {
@@ -56,9 +66,10 @@ function App() {
       console.log('componente foi desmontado')
     }
   }, [names])
-  */}
+  */
+  }
 
-/* 
+  /* 
   const number = useCounter(9)
 
   // const counter = { current: 2 }
@@ -74,8 +85,8 @@ function App() {
   }, [])
 */
 
- /*  const [state, dispatch] = useReducer(reducer, initialState) */
-  
+  /*  const [state, dispatch] = useReducer(reducer, initialState) */
+
   const boxRef = useRef<ScrollableRef>(null);
   const [content, setContent] = useState<string>();
   const [postId, setPostId] = useState(1);
@@ -96,10 +107,10 @@ function App() {
   }, [fetchData]);
 
   // const data = Array(33_000_000).fill({ foo: "bar" });
-  const data = useMemo(() => Array(33_000_000).fill({ foo: "bar" }), []);
+  const data = useMemo(() => Array(33_000_000).fill({ foo: 'bar' }), []);
 
   return (
-    <div className="App" /* ref={div} */>
+    <div className='App' /* ref={div} */>
       {/* 
       <ul>
         {
@@ -145,14 +156,13 @@ function App() {
         diminuir
       </button> 
       */}
-       
-      { postId }
+
+      {postId}
       <ScrollableBox ref={boxRef} width={120} height={120}>
-        <p>{content || "carregando..."}</p>
+        <p>{content || 'carregando...'}</p>
       </ScrollableBox>
-      <button onClick={() => boxRef.current?.scrollToBottom()}>descer</button> 
-      <button onClick={() => setPostId(postId + 1)}>somar</button> 
-     
+      <button onClick={() => boxRef.current?.scrollToBottom()}>descer</button>
+      <button onClick={() => setPostId(postId + 1)}>somar</button>
     </div>
   );
 }

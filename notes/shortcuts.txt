@@ -1,6 +1,13 @@
+vsvode
+
 ctrl + b -> toogle menu de arquivos a esquerda
 ctrl + ' -> toogle terminal
 ctrl + p -> abrir arquivo
 
 scroll + arrastar pra baixo -> posiciona cursor em várias linhas em determinada posição
 ctrl + shift + seta para o lado -> seleciona até próxima vírgula 
+
+figma
+ctrl + scroll - zoom
+ctrl + 0 - visualiza em tamanho real
+botão play - visualiza a tela rodando

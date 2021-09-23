@@ -6,3 +6,6 @@ MVP - Minimum Viable Product - Mínimo Produto Viável
 CMS - Content Management System, ou Sistema de Gerenciamento de Conteúdo
 Feature - Neste contexto, uma feature é uma funcionalidade do sistema.
 Guideline - Neste contexto, um guia visual para criar nosso software e seus componentes.
+
+link do figma: https://figma.com/
+

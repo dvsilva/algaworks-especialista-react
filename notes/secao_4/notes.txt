@@ -9,3 +9,5 @@ Guideline - Neste contexto, um guia visual para criar nosso software e seus comp
 
 link do figma: https://figma.com/
 
+plugins do figma (clique com direito > plugins)
+Iconify

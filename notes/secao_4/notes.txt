@@ -1,0 +1,8 @@
+documento: https://www.notion.so/danielbonifacio/Documentos-8dca4ded101d42478b6bc2f2c7a0fb46
+figma: https://github.com/algaworks/alganews-figma
+
+Briefing - Documento base com perguntas e respostas sobre determinado projeto
+MVP - Minimum Viable Product - Mínimo Produto Viável
+CMS - Content Management System, ou Sistema de Gerenciamento de Conteúdo
+Feature - Neste contexto, uma feature é uma funcionalidade do sistema.
+Guideline - Neste contexto, um guia visual para criar nosso software e seus componentes.

@@ -11,3 +11,12 @@ link do figma: https://figma.com/
 
 plugins do figma (clique com direito > plugins)
 Iconify
+
+link story book
+https://storybook.js.org/
+
+criar projeto com story book
+npm install --global yarn
+yarn create react-app alganews-cms --template typescript
+npx sb init
+yarn storybook

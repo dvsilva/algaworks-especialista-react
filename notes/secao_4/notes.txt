@@ -20,3 +20,6 @@ npm install --global yarn
 yarn create react-app alganews-cms --template typescript
 npx sb init
 yarn storybook
+
+dependências
+yarn add styled-components && yarn add -D @types/styled-components 

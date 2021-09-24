@@ -1,7 +1,6 @@
 import Icon from "@mdi/react";
 import { mdiInformation } from '@mdi/js'
 import styled from "styled-components";
-import Paragraph from "../Typography/Paragraph";
 
 export interface InfoProps {
   title: string

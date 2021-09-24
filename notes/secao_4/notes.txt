@@ -25,6 +25,8 @@ dependências
 yarn add styled-components && yarn add -D @types/styled-components
 yarn add polished
 yarn add @mdi/react @mdi/js
+yarn add react-table
+yarn add -D @types/react-table
 
 extensões
 vscode-styled-components

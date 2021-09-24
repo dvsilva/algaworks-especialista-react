@@ -18,7 +18,7 @@ export default function ValueDescriptor (props: ValueDescriptorProps) {
     <div>
       {
         props.isCurrency &&
-          <span className="Currency">{'R$ '}</span>
+          <span className="Currency">{'R$'}</span>
       }
       <span className="Value">
         { props.value.toLocaleString('pt-br') }

@@ -24,3 +24,7 @@ yarn storybook
 dependências
 yarn add styled-components && yarn add -D @types/styled-components
 yarn add polished
+
+
+extensões
+vscode-styled-components

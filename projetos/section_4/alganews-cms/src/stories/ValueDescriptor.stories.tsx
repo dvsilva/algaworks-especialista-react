@@ -17,17 +17,23 @@ Default.args = {
 export const DefaultCurrency = Template.bind({})
 DefaultCurrency.args = {
   description: 'Ganhos na semana',
-  value: 560322.02
+  value: 560322.02,
+  isCurrency: true,
+  color: 'default'
 }
 
 export const Primary = Template.bind({})
 Primary.args = {
   description: 'Ganhos na semana',
-  value: 560322.02
+  value: 560322.02,
+  isCurrency: false,
+  color: 'primary'
 }
 
 export const PrimaryCurrency = Template.bind({})
 PrimaryCurrency.args = {
   description: 'Ganhos na semana',
-  value: 560322.02
+  value: 560322.02,
+  isCurrency: true,
+  color: 'primary'
 }

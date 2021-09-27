@@ -23,6 +23,7 @@ const data = {
 };
 
 const options = {
+  maintainAspectRatio: false,
   scales: {
     yAxes: [
       {
@@ -50,6 +51,7 @@ export default function Chart () {
   return <div>
     <Line
       type="line"
+      height={100}
       data={data}
       options={options}
     />

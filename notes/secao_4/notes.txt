@@ -27,9 +27,14 @@ yarn add polished
 yarn add @mdi/react @mdi/js
 yarn add react-table
 yarn add -D @types/react-table
+// yarn add react-chartjs-2 chart.js
+yarn add chart.js@2.9.4 react-chartjs-2@2.11.1
+yarn add -D @types/chart.js@2.9.32
 
 extensões
 vscode-styled-components
 
 links
 https://materialdesignicons.com/
+https://www.chartjs.org/docs/latest/
+https://www.npmjs.com/package/react-chartjs-2

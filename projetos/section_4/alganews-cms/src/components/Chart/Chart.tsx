@@ -22,7 +22,7 @@ const data = {
   ],
 };
 
-const options = {
+const options: Chart.ChartOptions = {
   maintainAspectRatio: false,
   scales: {
     yAxes: [
@@ -38,7 +38,7 @@ const options = {
         position: 'right',
         id: 'y-axis-2',
         gridLines: {
-          drawOnArea: false,
+          display: false
         },
       },
     ],

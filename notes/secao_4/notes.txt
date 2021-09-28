@@ -30,6 +30,9 @@ yarn add -D @types/react-table
 // yarn add react-chartjs-2 chart.js
 yarn add chart.js@2.9.4 react-chartjs-2@2.11.1
 yarn add -D @types/chart.js@2.9.32
+yarn add react-tag-input@6.5.2
+yarn add -D @types/react-tag-input
+yarn add react-dnd@5.0.0 react-dnd-html5-backend@3.0.2
 
 extensões
 vscode-styled-components
@@ -38,3 +41,4 @@ links
 https://materialdesignicons.com/
 https://www.chartjs.org/docs/latest/
 https://www.npmjs.com/package/react-chartjs-2
+https://keycode.info/

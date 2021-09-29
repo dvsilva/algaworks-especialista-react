@@ -12,15 +12,9 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Switch>
-        <Route path={'/home'}>
-          <Home />
-        </Route>
-        <Route path={'/contato'}>
-          <Contact />
-        </Route>
-        <Route>
-          <NotFound404 />
-        </Route>
+        <Route path={'/'} exact component={Home} />
+        <Route path={'/contato'} exact component={Contact} />
+        <Route component={NotFound404} />
       </Switch>
     </BrowserRouter>
   </React.StrictMode>,

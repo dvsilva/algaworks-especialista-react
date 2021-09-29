@@ -1,0 +1,3 @@
+problema de dependências
+- yarn why babel-loader -> porque utiliza o babel-loader
+

@@ -1,16 +1,11 @@
 import { useEffect } from "react"
-import { useLocation, useParams } from "react-router"
-
-function useQuery () {
-  return new URLSearchParams(useLocation().search)
-}
+import { useParams } from "react-router"
 
 export default function CalcView () {
   const params = useParams<{ a: string, b: string }>()
-  const query = useQuery()
   
   useEffect(() => {
-    console.log(query.get('operation'))
+    console.log(params)
   }, [])
 
   return <div>

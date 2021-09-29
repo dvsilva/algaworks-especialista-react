@@ -7,6 +7,8 @@ import reportWebVitals from './reportWebVitals';
 import Home from './views/Home.view';
 import NotFound404 from './views/NotFound404.view';
 import Contact from './views/Contact.view';
+import UserView from './views/User.view';
+import CalcView from './views/Calc.view';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -21,6 +23,8 @@ ReactDOM.render(
         <Switch>
           <Route path={'/'} exact component={Home} />
           <Route path={'/contato'} exact component={Contact} />
+          <Route path={'/usuario/:userId'} component={UserView} />
+          <Route path={'/sum/:a/:b'} component={CalcView} />
           <Route component={NotFound404} />
         </Switch>
       </BrowserRouter>

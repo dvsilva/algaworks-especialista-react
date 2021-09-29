@@ -1,0 +1,5 @@
+problema de dependências
+- yarn why babel-loader -> porque utiliza o babel-loader
+
+dependências
+yarn add react-router-dom && yarn add -D @types/react-router-dom

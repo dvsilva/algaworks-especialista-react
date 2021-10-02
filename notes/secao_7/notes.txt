@@ -20,9 +20,15 @@ docker
      - padronização dos ambientes
      - facilita a distribuição e execução das aplicações
 
+windows
 criar arquivo .wlsconfig na pasta C:/usuários/<user>
 [wsl2]
 memory=3GB
+
+linux
+instalar docker -> sudo apt install docker docker-compose
+adicionar usuario no grupo -> sudo  usermode -aG docker <user ou ${USER}>
+verificar grupos do usuário -> id -nG
 
 links
 https://docs.docker.com/
@@ -30,3 +36,5 @@ https://docs.docker.com/
 https://www.docker.com/products/docker-desktop
 https://docs.microsoft.com/pt-br/windows/wsl/install
 https://docs.microsoft.com/pt-br/windows/wsl/install#step-4---download-the-linux-kernel-update-package
+
+https://docs.docker.com/engine/install/ubuntu/

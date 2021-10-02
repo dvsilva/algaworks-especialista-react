@@ -20,5 +20,13 @@ docker
      - padronização dos ambientes
      - facilita a distribuição e execução das aplicações
 
+criar arquivo .wlsconfig na pasta C:/usuários/<user>
+[wsl2]
+memory=3GB
+
 links
 https://docs.docker.com/
+
+https://www.docker.com/products/docker-desktop
+https://docs.microsoft.com/pt-br/windows/wsl/install
+https://docs.microsoft.com/pt-br/windows/wsl/install#step-4---download-the-linux-kernel-update-package

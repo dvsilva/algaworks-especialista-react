@@ -7,8 +7,11 @@ ctrl + p -> abrir arquivo
 scroll + arrastar pra baixo -> posiciona cursor em várias linhas em determinada posição
 ctrl + shift + seta para o lado -> seleciona até próxima vírgula 
 
+ctrl + d -> seleciona palavra em todo o arquivo
+
 figma
 ctrl + scroll - zoom
 ctrl + 0 - visualiza em tamanho real
 botão play - visualiza a tela rodando
 mousepad ou espaço + movimento do mouse - movimentar na tela
+shit + r - habilita réguas

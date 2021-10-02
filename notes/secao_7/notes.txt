@@ -1,0 +1,24 @@
+docker
+- é uma tecnologia ou software focado na criação e gerenciamento de containers
+- containers 
+    - tecnologia antiga do linux popularizada pelo docker
+    - ambiente de execução isolada que funciona diretamente no hardware do host e no SO
+    - funciona via tecnologia ou software como o docker
+    - não são uma máquina virtual
+       
+- containers 
+    - mais simples
+    - isola o ambiente de execução de uma app ou sistema
+    - executa diretamente no hospedeiro
+    - não exige um SO convidado ou hardware virtual
+- VM 
+    - isola o SO inteiro e hardware
+    - possui um software de virtualização (hypervisor) um hardware virtual
+
+- vantagens
+     - agiliza o desenvolvimento
+     - padronização dos ambientes
+     - facilita a distribuição e execução das aplicações
+
+links
+https://docs.docker.com/

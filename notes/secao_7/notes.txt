@@ -54,7 +54,12 @@ criando um container
         - docker container run -p 8080:80 --name servidor-web -d nginx:alpine
     - mostrar imagens baixadas -> docker image ls
     
-
+criar docker file
+    - criar imagem -> docker image build .
+    - baixar imagem do debian -> docker image pull debian:latest
+    - criar imagem com tags -> docker image build -t servidor-web:v1 .
+    - rodar -> docker container run -p 8080:80 servidor-web:v1
+    - 
 
 links
 https://docs.docker.com/

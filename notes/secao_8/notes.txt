@@ -1,3 +1,4 @@
 links:
 https://github.com/axios/axios
 https://oai.github.io/Documentation/
+https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods

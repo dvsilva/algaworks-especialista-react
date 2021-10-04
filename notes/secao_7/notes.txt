@@ -82,6 +82,27 @@ rodando com volumes
     - remover container -> docker container rm mongodatabase
     - rodar novamente -> docker container run -v mongodbdata:/data/db --name mongodatabase -d mongo
 
+redes do container
+    - ver redes -> docker network ls 
+    - bridge
+        - rede padrão -> se não configurar é atribuido automaticamente
+        - container fica isolado da máquina hospedeira
+        - não compartilha o mesmo ip da máquina hospedeira
+        - para acessar deve acessar via link de portas (-p)
+        - comandos
+            - rodando com rede bridge -> docker container run --network bridge -p 8080:80 -d nginx:alpine
+            - conectar na bash do container -> docker container exec -it <id> sh
+            - ver configuração de rede -> ifconfig
+    - none
+        -  não está em rede nenhuma
+        - rodando sem rede -> docker container run --network none -d nginx:alpine
+        - ver containers conectados a uma rede -> docker network inspect <none, bridge>
+    - host
+        - container está dentro da rede do computador do hospedeiro
+        - não é suportado pelo windows
+        - rodando com host -> docker container run --network host -d nginx:alpine
+    
+
 links
 https://docs.docker.com/
 

@@ -108,6 +108,15 @@ docker compose
     - iniciar container pelo docker compose -> docker-compose up
     - parar containers -> docker-compose down
 
+remover dados não utilizados
+    - manualmente -> docker image ls + docker image rm
+    - remover imagens sem tags ou nomes -> docker image prune
+    - remover imagens não utilizadas por nenhum container -> docker image prune -a
+    - remover volume não utilizados -> docker volume prune
+    - remover redes não utilizados -> docker network prune
+    - remover containers não utilizados -> docker container prune
+    - remover containers, redes, imagens e cache -> docker system prune
+
 links
 https://docs.docker.com/
 

@@ -1,5 +1,11 @@
+subindo infra
+- subir infra -> docker-compose up -d
+- visualizar swagger -> localhost:8082
+
 links:
 https://github.com/axios/axios
 https://oai.github.io/Documentation/
 https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods
 https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status
+
+https://github.com/algaworks/alganews-infra

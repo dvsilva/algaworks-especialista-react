@@ -65,6 +65,22 @@ criar imagem docker para api registry
     - construir imagem -> docker image build -t rest-api:v1 .
     - rodar -> docker container run -p 8080:8080 rest-api:v1
 
+volumes
+    - são mecanismos de armazenamento do docker
+    - mesmo que for removido não vai perder as informações
+
+rodando com volumes
+    - criando volume -> docker volume create mongodbdata
+    - verificando volumes -> docker volume ls
+    - criando container com volume -> docker container run -v mongodbdata:/data/db --name mongodatabase -d mongo
+    - conectar na bash do container -> docker container exec -it mongodatabase bash
+    - comandos do mongodb 
+        - acessar cmd -> mongo
+        - criar registro -> db.clientes.insertOne({"nome" : "Alex"})
+        - listar clientes -> db.clientes.find()
+    - parar container -> docker container stop mongodatabase
+    - remover container -> docker container rm mongodatabase
+    - rodar novamente -> docker container run -v mongodbdata:/data/db --name mongodatabase -d mongo
 
 links
 https://docs.docker.com/

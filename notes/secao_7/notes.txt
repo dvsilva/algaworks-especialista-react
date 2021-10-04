@@ -30,6 +30,18 @@ instalar docker -> sudo apt install docker docker-compose
 adicionar usuario no grupo -> sudo  usermode -aG docker <user ou ${USER}>
 verificar grupos do usuário -> id -nG
 
+imagem de um container
+    - são pacotes que podem representar aplicações ou um sistema operacional
+    - utilizada para a criação de um container
+    - permite uma aplicação ser distribuida e executada facilmente
+    - formato compacto que possui todas as dependências necessárias para executar uma aplicação
+    - nome, versão e tags
+    - são armazenadas em um sistema de container registry como o DockerHub (repositório de imagens)
+
+dockerfile
+    - arquivo com todas as instruções necessárias para a criação de uma imagem docker
+    - é lido durante o processo de build para a criação da imagem
+
 links
 https://docs.docker.com/
 

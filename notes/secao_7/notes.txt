@@ -101,7 +101,12 @@ redes do container
         - container está dentro da rede do computador do hospedeiro
         - não é suportado pelo windows
         - rodando com host -> docker container run --network host -d nginx:alpine
-    
+
+docker compose
+    - facilitador na hora de gerenciar diversos containers simultaneamente
+    - possibilita a criação de um arquivo de configuração no qual podemos escrever os containers que desejamos utilizar
+    - iniciar container pelo docker compose -> docker-compose up
+    - parar containers -> docker-compose down
 
 links
 https://docs.docker.com/

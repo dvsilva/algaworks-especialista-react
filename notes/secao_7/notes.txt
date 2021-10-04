@@ -123,5 +123,6 @@ https://docs.docker.com/
 https://www.docker.com/products/docker-desktop
 https://docs.microsoft.com/pt-br/windows/wsl/install
 https://docs.microsoft.com/pt-br/windows/wsl/install#step-4---download-the-linux-kernel-update-package
+https://docs.microsoft.com/pt-br/windows/wsl/install-manual#step-4---download-the-linux-kernel-update-package
 
 https://docs.docker.com/engine/install/ubuntu/

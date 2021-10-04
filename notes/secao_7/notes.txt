@@ -42,6 +42,20 @@ dockerfile
     - arquivo com todas as instruções necessárias para a criação de uma imagem docker
     - é lido durante o processo de build para a criação da imagem
 
+criando um container
+    - download da imagem -> docker image pull nginx
+    - download da imagem de versão específica -> docker image pull nginx:stable
+    - criar container baseado na imagem -> docker container run nginx:stable
+    - listar containers -> docker container ls
+    - parar container -> docker container stop <id>
+    - rodar com configs -> docker container run -p 8080:80 nginx:stable
+    - iniciar container -> docker container start <id>
+    - rodar com configs (com nome, soltar terminal, baixar imagem nova)
+        - docker container run -p 8080:80 --name servidor-web -d nginx:alpine
+    - mostrar imagens baixadas -> docker image ls
+    
+
+
 links
 https://docs.docker.com/
 

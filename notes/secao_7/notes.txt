@@ -1,0 +1,127 @@
+docker
+- é uma tecnologia ou software focado na criação e gerenciamento de containers
+- containers 
+    - tecnologia antiga do linux popularizada pelo docker
+    - ambiente de execução isolada que funciona diretamente no hardware do host e no SO
+    - funciona via tecnologia ou software como o docker
+    - não são uma máquina virtual
+       
+- containers 
+    - mais simples
+    - isola o ambiente de execução de uma app ou sistema
+    - executa diretamente no hospedeiro
+    - não exige um SO convidado ou hardware virtual
+- VM 
+    - isola o SO inteiro e hardware
+    - possui um software de virtualização (hypervisor) um hardware virtual
+
+- vantagens
+     - agiliza o desenvolvimento
+     - padronização dos ambientes
+     - facilita a distribuição e execução das aplicações
+
+windows
+criar arquivo .wlsconfig na pasta C:/usuários/<user>
+[wsl2]
+memory=3GB
+
+linux
+instalar docker -> sudo apt install docker docker-compose
+adicionar usuario no grupo -> sudo  usermode -aG docker <user ou ${USER}>
+verificar grupos do usuário -> id -nG
+
+imagem de um container
+    - são pacotes que podem representar aplicações ou um sistema operacional
+    - utilizada para a criação de um container
+    - permite uma aplicação ser distribuida e executada facilmente
+    - formato compacto que possui todas as dependências necessárias para executar uma aplicação
+    - nome, versão e tags
+    - são armazenadas em um sistema de container registry como o DockerHub (repositório de imagens)
+
+dockerfile
+    - arquivo com todas as instruções necessárias para a criação de uma imagem docker
+    - é lido durante o processo de build para a criação da imagem
+
+criando um container
+    - download da imagem -> docker image pull nginx
+    - download da imagem de versão específica -> docker image pull nginx:stable
+    - criar container baseado na imagem -> docker container run nginx:stable
+    - listar containers -> docker container ls
+    - parar container -> docker container stop <id>
+    - rodar com configs -> docker container run -p 8080:80 nginx:stable
+    - iniciar container -> docker container start <id>
+    - rodar com configs (com nome, soltar terminal, baixar imagem nova)
+        - docker container run -p 8080:80 --name servidor-web -d nginx:alpine
+    - mostrar imagens baixadas -> docker image ls
+    
+criar docker file
+    - criar imagem -> docker image build .
+    - baixar imagem do debian -> docker image pull debian:latest
+    - criar imagem com tags -> docker image build -t servidor-web:v1 .
+    - rodar -> docker container run -p 8080:80 servidor-web:v1
+
+criar imagem docker para api registry
+    - baixar imagem -> docker image pull openjdk:8-jre-slim
+    - construir imagem -> docker image build -t rest-api:v1 .
+    - rodar -> docker container run -p 8080:8080 rest-api:v1
+
+volumes
+    - são mecanismos de armazenamento do docker
+    - mesmo que for removido não vai perder as informações
+
+rodando com volumes
+    - criando volume -> docker volume create mongodbdata
+    - verificando volumes -> docker volume ls
+    - criando container com volume -> docker container run -v mongodbdata:/data/db --name mongodatabase -d mongo
+    - conectar na bash do container -> docker container exec -it mongodatabase bash
+    - comandos do mongodb 
+        - acessar cmd -> mongo
+        - criar registro -> db.clientes.insertOne({"nome" : "Alex"})
+        - listar clientes -> db.clientes.find()
+    - parar container -> docker container stop mongodatabase
+    - remover container -> docker container rm mongodatabase
+    - rodar novamente -> docker container run -v mongodbdata:/data/db --name mongodatabase -d mongo
+
+redes do container
+    - ver redes -> docker network ls 
+    - bridge
+        - rede padrão -> se não configurar é atribuido automaticamente
+        - container fica isolado da máquina hospedeira
+        - não compartilha o mesmo ip da máquina hospedeira
+        - para acessar deve acessar via link de portas (-p)
+        - comandos
+            - rodando com rede bridge -> docker container run --network bridge -p 8080:80 -d nginx:alpine
+            - conectar na bash do container -> docker container exec -it <id> sh
+            - ver configuração de rede -> ifconfig
+    - none
+        -  não está em rede nenhuma
+        - rodando sem rede -> docker container run --network none -d nginx:alpine
+        - ver containers conectados a uma rede -> docker network inspect <none, bridge>
+    - host
+        - container está dentro da rede do computador do hospedeiro
+        - não é suportado pelo windows
+        - rodando com host -> docker container run --network host -d nginx:alpine
+
+docker compose
+    - facilitador na hora de gerenciar diversos containers simultaneamente
+    - possibilita a criação de um arquivo de configuração no qual podemos escrever os containers que desejamos utilizar
+    - iniciar container pelo docker compose -> docker-compose up
+    - parar containers -> docker-compose down
+
+remover dados não utilizados
+    - manualmente -> docker image ls + docker image rm
+    - remover imagens sem tags ou nomes -> docker image prune
+    - remover imagens não utilizadas por nenhum container -> docker image prune -a
+    - remover volume não utilizados -> docker volume prune
+    - remover redes não utilizados -> docker network prune
+    - remover containers não utilizados -> docker container prune
+    - remover containers, redes, imagens e cache -> docker system prune
+
+links
+https://docs.docker.com/
+
+https://www.docker.com/products/docker-desktop
+https://docs.microsoft.com/pt-br/windows/wsl/install
+https://docs.microsoft.com/pt-br/windows/wsl/install#step-4---download-the-linux-kernel-update-package
+
+https://docs.docker.com/engine/install/ubuntu/

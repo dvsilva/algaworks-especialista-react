@@ -59,7 +59,12 @@ criar docker file
     - baixar imagem do debian -> docker image pull debian:latest
     - criar imagem com tags -> docker image build -t servidor-web:v1 .
     - rodar -> docker container run -p 8080:80 servidor-web:v1
-    - 
+
+criar imagem docker para api registry
+    - baixar imagem -> docker image pull openjdk:8-jre-slim
+    - construir imagem -> docker image build -t rest-api:v1 .
+    - rodar -> docker container run -p 8080:8080 rest-api:v1
+
 
 links
 https://docs.docker.com/

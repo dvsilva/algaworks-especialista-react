@@ -11,6 +11,9 @@ beneficios
     - orientação -> transparente em relação ao que a API faz
     - ferramentas -> validação, geração de código e geração de documentação
 
+criar objetos a partir do swagger
+npx openapi-typescript alganews-api.yml --output types.ts
+
 dependências
 yarn add axios
 

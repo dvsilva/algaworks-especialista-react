@@ -11,6 +11,9 @@ beneficios
     - orientação -> transparente em relação ao que a API faz
     - ferramentas -> validação, geração de código e geração de documentação
 
+dependências
+yarn add axios
+
 links:
 https://github.com/axios/axios
 https://oai.github.io/Documentation/

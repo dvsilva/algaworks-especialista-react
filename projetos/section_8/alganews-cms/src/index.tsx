@@ -38,6 +38,10 @@ async function getDataFromApi() {
         body: 'Lorem Ipsum dolor sit amet'
       })
     })
+    console.log('Response:', response)
+    if (response.status >= 400) {
+      throw new Error(await response.json())
+    }
     const posts = await response.json()
     console.log('Sucesso')
     console.log(posts)

@@ -26,15 +26,25 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-function getDataFromApi() {
-  fetch('http://localhost:8080/posts')
-    .then(res => res.json())
-    .then(posts => {
-      console.log(posts)
+async function getDataFromApi() {
+  try {
+    const response = await fetch('http://localhost:8080/posts', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        title: 'Olá, mundo',
+        body: 'Lorem Ipsum dolor sit amet'
+      })
     })
-    .catch(error => {
-      console.log(error.message)
-    })
+    const posts = await response.json()
+    console.log('Sucesso')
+    console.log(posts)
+  } catch (error) {
+    console.log('Houve erro')
+    console.log(error.message)
+  }
 }
 
 getDataFromApi()

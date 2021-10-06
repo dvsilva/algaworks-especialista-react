@@ -21,6 +21,7 @@ problemas em trafegar arquivos para a API (sem ser URL assinada)
 
 dependências
 yarn add axios
+yarn add uuidv4
 
 links:
 https://github.com/axios/axios

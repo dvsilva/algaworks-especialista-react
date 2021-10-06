@@ -14,6 +14,11 @@ beneficios
 criar objetos a partir do swagger
 npx openapi-typescript alganews-api.yml --output types.ts
 
+problemas em trafegar arquivos para a API (sem ser URL assinada)
+- memória -> alto consumo de memória em larga escala
+- latência -> o client precisa esperar o upload da API para o Storage
+- consumo de banda -> a API trafegará mais dados, consumindo mais banda
+
 dependências
 yarn add axios
 

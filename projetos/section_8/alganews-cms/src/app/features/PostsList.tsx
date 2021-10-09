@@ -9,21 +9,7 @@ import { Post } from "../../sdk/@types"
 import PostService from "../../sdk/services/Post.service"
 import Table from "../components/Table/Table"
 
-type IPost = {
-  id: number
-  title: string
-  views: number
-  author: {
-    name: string
-    avatar: string
-  }
-  conversions: {
-    thoushands: number
-    percentage: number
-  }
-}
-
-export default function PostList() {
+export default function PostList () {
   const [posts, setPosts] = useState<Post.Paginated>()
 
   useEffect(() => {
@@ -67,9 +53,9 @@ export default function PostList() {
             textAlign: 'right',
             fontFamily: '"Roboto mono", monospace'
           }}
-        >
-          {format(new Date(props.value), 'dd/MM/yyyy')}
-        </div>
+          >
+            { format(new Date(props.value), 'dd/MM/yyyy') }
+          </div>
       },
       {
         Header: () => <div style={{ textAlign: 'right' }}>Última atualização</div>,
@@ -79,9 +65,9 @@ export default function PostList() {
             textAlign: 'right',
             fontFamily: '"Roboto mono", monospace'
           }}
-        >
-          {format(new Date(props.value), 'dd/MM/yyyy - kk:mm')}
-        </div>
+          >
+            { format(new Date(props.value), 'dd/MM/yyyy') }
+          </div>
       },
       {
         id: Math.random().toString(),

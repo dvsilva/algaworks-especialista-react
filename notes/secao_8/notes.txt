@@ -28,6 +28,8 @@ yarn remove uuidv4
 yarn add uuid
 yarn add -D @types/uuid
 
+yarn add react-loading-skeleton
+
 links:
 https://github.com/axios/axios
 https://oai.github.io/Documentation/
@@ -35,3 +37,5 @@ https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods
 https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status
 
 https://github.com/algaworks/alganews-infra
+
+https://www.npmjs.com/package/react-loading-skeleton

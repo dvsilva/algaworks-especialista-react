@@ -38,7 +38,8 @@ export default function PostForm () {
         title: 'Post salvo com sucesso',
         description: 'Você acabou de criar o post com o id ' + insertedPost.id
       })
-    } finally {
+    }
+    finally {
       setPublishing(false)
     }
   }

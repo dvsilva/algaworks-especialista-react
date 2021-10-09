@@ -28,7 +28,7 @@ function ImageUpload(props: ImageUploadProps) {
           const imageUrl = await FileService.upload(file)
           props.onImageUpload(imageUrl)
         } finally {
-          // setPushing(false)
+          setPushing(false)
         }
       })
 

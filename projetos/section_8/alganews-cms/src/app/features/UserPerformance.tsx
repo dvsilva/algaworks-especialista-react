@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react"
+import withBoundary from "../../core/hoc/withBoundary"
 import transformEditorMonthlyEaningsIntoChartJs from "../../core/utils/transformEditorMonthlyEarningsIntoChartJs"
 import MetricService from "../../sdk/services/Metric.service"
 import Chart, { ChartProps } from "../components/Chart/Chart"
-import ErrorBoundary from "../components/ErrorBoundary"
 
-export default function UserPerformance () {
+function UserPerformance () {
   const [editorEarnings, setEditorEarings] = useState<ChartProps['data']>()
   const [error, setError] = useState<Error>()
 
@@ -24,10 +24,10 @@ export default function UserPerformance () {
   if (!editorEarnings)
     return null
 
-  return <ErrorBoundary component={'performance do usuario'}>
-    <Chart
-      title="batata"
-      data={editorEarnings}
-    />
-  </ErrorBoundary>
+  return <Chart
+    title="batata"
+    data={editorEarnings}
+  />
 }
+
+export default withBoundary(UserPerformance, 'Batata')

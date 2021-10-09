@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import transformEditorMonthlyEaningsIntoChartJs from "../../core/utils/transformEditorMonthlyEarningsIntoChartJs"
 import MetricService from "../../sdk/services/Metric.service"
 import Chart, { ChartProps } from "../components/Chart/Chart"
+import ErrorBoundary from "../components/ErrorBoundary"
 
 export default function UserPerformance () {
   const [editorEarnings, setEditorEarings] = useState<ChartProps['data']>()
@@ -23,8 +24,10 @@ export default function UserPerformance () {
   if (!editorEarnings)
     return null
 
-  return <Chart
-    title="Média de performance nos últimos 12 meses"
-    data={editorEarnings}
-  />
+  return <ErrorBoundary component={'performance do usuario'}>
+    <Chart
+      title="batata"
+      data={editorEarnings}
+    />
+  </ErrorBoundary>
 }

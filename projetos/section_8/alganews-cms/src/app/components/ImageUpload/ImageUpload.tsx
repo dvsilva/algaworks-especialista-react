@@ -1,5 +1,6 @@
 import { mdiUpload } from '@mdi/js'
 import Icon from '@mdi/react'
+import { useEffect } from 'react'
 import { ChangeEvent, useState } from 'react'
 import FileService from '../../../sdk/services/File.service'
 import Button from '../Button/Button'
@@ -9,10 +10,11 @@ import * as IU from './ImageUpload.styles'
 export interface ImageUploadProps {
   label: string
   onImageUpload: (imageUrl: string) => any
+  preview?: string
 }
 
 function ImageUpload (props: ImageUploadProps) {
-  const [filePreview, setFilePreview] = useState<string | null>(null)
+  const [filePreview, setFilePreview] = useState<string | undefined>(undefined)
   const [pushing, setPushing] = useState(false)
 
   function handleChange (e: ChangeEvent<HTMLInputElement>) {
@@ -36,6 +38,10 @@ function ImageUpload (props: ImageUploadProps) {
     }
   }
 
+  useEffect(() => {
+    setFilePreview(props.preview)
+  }, [props.preview])
+
   if (filePreview)
     return <IU.ImagePreviewWrapper>
       <Loading show={pushing} />
@@ -43,7 +49,7 @@ function ImageUpload (props: ImageUploadProps) {
         <Button
           variant={'primary'}
           label={'Remover imagem'}
-          onClick={() => setFilePreview(null)}  
+          onClick={() => setFilePreview(undefined)}  
         />
       </IU.ImagePreview>
     </IU.ImagePreviewWrapper>

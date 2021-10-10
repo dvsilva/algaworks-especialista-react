@@ -7,7 +7,7 @@ openapi
     - definition -> arquivo que descreve o que a API pode ou não fazer
 
 beneficios
-    - formato padronizado -> legível por humanos ou máaquinas
+    - formato padronizado -> legível por humanos ou máquinas
     - orientação -> transparente em relação ao que a API faz
     - ferramentas -> validação, geração de código e geração de documentação
 
@@ -32,6 +32,9 @@ yarn add react-loading-skeleton
 
 yarn add react-paginate
 yarn add -D @types/react-paginate
+
+extensões:
+code spell checker
 
 links:
 https://github.com/axios/axios

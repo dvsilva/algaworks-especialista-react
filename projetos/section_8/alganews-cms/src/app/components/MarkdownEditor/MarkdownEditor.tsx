@@ -18,6 +18,11 @@ export default function MarkdownEditor (props: MarkdownEditorProps) {
     style={{ height: props.readOnly ? 'auto' : 300 }}
     value={props.value}
     renderHTML={text => parser.render(text)}
+    config={{
+      view: {
+        html: false
+      }
+    }}
     onChange={({ text }) => props.onChange && props.onChange(text)}
     view={props.readOnly ? {
       menu: false,

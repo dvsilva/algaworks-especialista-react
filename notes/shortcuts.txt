@@ -8,6 +8,7 @@ scroll + arrastar pra baixo -> posiciona cursor em várias linhas em determinada
 ctrl + shift + seta para o lado -> seleciona até próxima vírgula 
 
 ctrl + d -> seleciona palavra em todo o arquivo
+ctrl + alt + f (ou menu do botão direito) -> formatar documento
 
 figma
 ctrl + scroll - zoom

@@ -1,0 +1,49 @@
+subindo infra
+    - subir infra -> docker-compose up -d
+    - visualizar swagger -> localhost:8082
+
+openapi
+    - specification -> como documentar uma API
+    - definition -> arquivo que descreve o que a API pode ou não fazer
+
+beneficios
+    - formato padronizado -> legível por humanos ou máquinas
+    - orientação -> transparente em relação ao que a API faz
+    - ferramentas -> validação, geração de código e geração de documentação
+
+criar objetos a partir do swagger
+npx openapi-typescript alganews-api.yml --output types.ts
+
+problemas em trafegar arquivos para a API (sem ser URL assinada)
+- memória -> alto consumo de memória em larga escala
+- latência -> o client precisa esperar o upload da API para o Storage
+- consumo de banda -> a API trafegará mais dados, consumindo mais banda
+
+dependências
+yarn add axios
+yarn add uuidv4
+yarn add date-fns
+
+yarn remove uuidv4
+yarn add uuid
+yarn add -D @types/uuid
+
+yarn add react-loading-skeleton
+
+yarn add react-paginate
+yarn add -D @types/react-paginate
+
+extensões:
+code spell checker
+
+links:
+https://github.com/axios/axios
+https://oai.github.io/Documentation/
+https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Methods
+https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status
+
+https://github.com/algaworks/alganews-infra
+
+https://www.npmjs.com/package/react-loading-skeleton
+
+https://loading.io/css/

@@ -5,7 +5,7 @@ import { useState } from "react"
 import { useEffect } from "react"
 import { useMemo } from "react"
 import Skeleton from "react-loading-skeleton"
-import { Column, useTable } from "react-table"
+import { Column, usePagination, useTable } from "react-table"
 import { Post } from "../../sdk/@types"
 import PostService from "../../sdk/services/Post.service"
 import Table from "../components/Table/Table"
@@ -89,10 +89,16 @@ export default function PostList () {
     []
   )
 
-  const instance = useTable<Post.Summary>({
-    data: posts?.content || [],
-    columns
-  })
+  const instance = useTable<Post.Summary>(
+    {
+      data: posts?.content || [],
+      columns,
+      manualPagination: true,
+      initialState: { pageIndex: 0 },
+      pageCount: posts?.totalPages
+    },
+    usePagination
+  )
 
   if (!posts)
     return <div>

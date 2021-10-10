@@ -3,8 +3,17 @@ import { TableInstance } from 'react-table'
 import NoData from '../NoData/NoData'
 import * as T from './Table.styles'
 import Button from '../Button/Button'
+import { useEffect } from 'react'
 
-export default function Table<T extends Object> ({ instance }: { instance: TableInstance<T> }) {
+interface TableProps<T extends object> {
+  instance: TableInstance<T>
+  onPaginate?: (newPage: number) => any
+}
+
+export default function Table<T extends object> ({
+  instance,
+  onPaginate
+}: TableProps<T>) {
   const {
     getTableProps,
     getTableBodyProps,
@@ -22,6 +31,11 @@ export default function Table<T extends Object> ({ instance }: { instance: Table
       pageIndex,
     }
   } = instance
+
+  useEffect(() => {
+    onPaginate &&
+      onPaginate(pageIndex)
+  }, [pageIndex, onPaginate])
 
   return (
     <>

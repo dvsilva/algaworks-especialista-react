@@ -10,3 +10,10 @@ SDK (software development kit)
     - replicando código entre os projetos
     - com SDK centraliza as operações, tendo a v2 gera uma nova versão da SDK
 
+inicializar a SDK
+- criar pasta -> mkdir alganews-sdk
+- criar projeto -> yarn init -y
+- adicionar cli do ts -> yarn global add typescript
+- adicionar ts no projeto -> yarn add -D typescript
+- adicionar arquivo ts.config.json -> tsc --init
+- fazer build do projeto -> yarn build

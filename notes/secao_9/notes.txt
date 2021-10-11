@@ -1,0 +1,12 @@
+SDK (software development kit)
+- kit de ferramentas (teste, desenvolvimento, etc)
+- vamos focar no react apenas
+- o que terá no SDK ?
+    - serviços -> centralizar e privatizar serviços
+    - tipagens -> consistentes entre os softwares
+    - mais algo que seria necessário centralizar
+- exemplo
+    - times executando a mesma função
+    - replicando código entre os projetos
+    - com SDK centraliza as operações, tendo a v2 gera uma nova versão da SDK
+

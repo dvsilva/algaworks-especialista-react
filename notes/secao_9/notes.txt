@@ -25,8 +25,10 @@ patch -> npm version major
 
 criar conta no npm
 - logar via cmd -> npm login
-- publicar -> npm publish
+- fazer build do projeto -> yarn build (ou adicionar script)
+- publicar -> npm publish ou npm pu
 - pacotes privados pagos -> @dvsilva/sdk
 
 instalando a sdk
 - yarn add danielbonifacio-sdk
+- instalar versão específica -> yarn add danielbonifacio-sdk@1.2.0

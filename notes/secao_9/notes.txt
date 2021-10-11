@@ -22,3 +22,8 @@ versionamento (https://semver.org/lang/pt-BR/)
 patch -> npm version patch
 patch -> npm version minor
 patch -> npm version major
+
+criar conta no npm
+- logar via cmd -> npm login
+- publicar -> npm publish
+- pacotes privados pagos -> @dvsilva/sdk

@@ -27,3 +27,6 @@ criar conta no npm
 - logar via cmd -> npm login
 - publicar -> npm publish
 - pacotes privados pagos -> @dvsilva/sdk
+
+instalando a sdk
+- yarn add danielbonifacio-sdk

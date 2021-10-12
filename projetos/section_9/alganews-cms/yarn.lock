@@ -2,11 +2,6 @@
 # yarn lockfile v1
 
 
-"1.0.1@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/1.0.1/-/1.0.1-1.0.0.tgz#efcf4a29389892a61fa912d26e6bbee158ae8469"
-  integrity sha1-789KKTiYkqYfqRLSbmu+4ViuhGk=
-
 "@babel/code-frame@7.10.4":
   version "7.10.4"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.10.4.tgz#168da1a36e90da68ae8d49c0f1b48c7c6249213a"
@@ -5637,10 +5632,14 @@ damerau-levenshtein@^1.0.6:
   resolved "https://registry.yarnpkg.com/damerau-levenshtein/-/damerau-levenshtein-1.0.7.tgz#64368003512a1a6992593741a09a9d31a836f55d"
   integrity sha512-VvdQIPGdWP0SqFXghj79Wf/5LArmreyMsGLa6FG6iC4t3j7j5s71TrwWmT/4akbDQIqjfACkLZmjXhA7g2oUZw==
 
-danielbonifacio-sdk@1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/danielbonifacio-sdk/-/danielbonifacio-sdk-1.2.0.tgz#74c029f821c0a071aafc558afb5411629409b24f"
-  integrity sha512-M1+P5rXMFmc+IIappv5zjS3ZEo2l1KZvJABquIfwrzVOgiQHa8aVY0G5OHS5dXO3Ucs+TmwIC+smD453Y5oeUQ==
+danielbonifacio-sdk@2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/danielbonifacio-sdk/-/danielbonifacio-sdk-2.0.0.tgz#0f9efd619b0532cab8bd89e3278b9838582d91ba"
+  integrity sha512-GAUTLCxRCZDRX9DcAf+12HvmbwH2g83gyX6viar5TgpIYih9fasHc1pWe/i3F072hUny03zSMENzcrCqp83bLw==
+  dependencies:
+    axios "^0.21.1"
+    date-fns "^2.22.1"
+    uuid "^8.3.2"
 
 dashdash@^1.12.0:
   version "1.14.1"

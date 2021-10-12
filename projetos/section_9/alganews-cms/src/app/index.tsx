@@ -1,4 +1,3 @@
-import log, { feature } from "danielbonifacio-sdk";
 import { useEffect } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import info from "../core/utils/info";
@@ -9,9 +8,7 @@ import NotFound404 from "./views/NotFound404.view";
 import PostCreateView from "./views/PostCreate.view";
 import PostEditView from "./views/PostEdit.view";
 
-export default function App() {
-  log()
-  feature()
+export default function App () {
   useEffect(() => {
     window.onunhandledrejection = function (error: PromiseRejectionEvent) {
       console.log(error)

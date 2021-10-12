@@ -15,7 +15,7 @@ interface PostPreviewProps {
   postId: number
 }
 
-function PostPreview(props: PostPreviewProps) {
+function PostPreview (props: PostPreviewProps) {
   const [post, setPost] = useState<Post.Detailed>()
   const [loading, setLoading] = useState(false)
 
@@ -27,7 +27,7 @@ function PostPreview(props: PostPreviewProps) {
     })
   }
 
-  function reopenModal() {
+  function reopenModal () {
     modal({
       children: <PostPreview postId={props.postId} />
     })

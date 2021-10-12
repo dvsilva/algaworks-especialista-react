@@ -14,15 +14,6 @@ axios@^0.21.1:
   dependencies:
     follow-redirects "^1.10.0"
 
-danielbonifacio-sdk@2.6.0:
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/danielbonifacio-sdk/-/danielbonifacio-sdk-2.6.0.tgz#f82ec36422cfe992761cbca19c6d7e7047860074"
-  integrity sha512-2xcymvpWU03GjgqyUQnwTYsTXyXy3aB+n06nFK3m/nzULHADMbc9Md1wz/8u+/hsn170X65TalvgUfL2yCVX4A==
-  dependencies:
-    axios "^0.21.1"
-    date-fns "^2.22.1"
-    uuid "^8.3.2"
-
 date-fns@^2.22.1:
   version "2.22.1"
   resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.22.1.tgz#1e5af959831ebb1d82992bf67b765052d8f0efc4"

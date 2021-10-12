@@ -570,6 +570,7 @@ export namespace AlgaNews {
         detail: string;
         /** Lista de objetos ou campos que geraram o erro (opcional) */
         objects?: components["schemas"]["ProblemObject"][];
+        userMessage?: string;
       };
     };
     responses: {
@@ -1190,5 +1191,5 @@ export namespace AlgaNews {
     };
   }
 
-  export interface external { }
+  export interface external {}
 }

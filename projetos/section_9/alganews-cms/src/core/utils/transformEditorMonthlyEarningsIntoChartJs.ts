@@ -1,7 +1,7 @@
 import { ChartProps } from '../../app/components/Chart/Chart';
-import {Metric} from '../../sdk/@types';
 import {format} from 'date-fns'
 import {ptBR} from 'date-fns/locale'
+import { Metric } from 'danielbonifacio-sdk';
 
 function transformEditorMonthlyEaningsIntoChartJs (
   editorEarnings: Metric.EditorMonthlyEarnings

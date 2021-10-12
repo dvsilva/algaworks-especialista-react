@@ -33,6 +33,7 @@ instalando a sdk
 - yarn add danielbonifacio-sdk
 - instalar versão específica -> yarn add danielbonifacio-sdk@1.2.0
 - atualizar versão -> yarn add  danielbonifacio-sdk@2.0.0
+- atualizar ultima versão -> yarn add danielbonifacio-sdk@2.7.0
 
 instalando dependências na sdk
 - yarn add axios uuid date-fns

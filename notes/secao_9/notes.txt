@@ -1,0 +1,40 @@
+SDK (software development kit)
+- kit de ferramentas (teste, desenvolvimento, etc)
+- vamos focar no react apenas
+- o que terá no SDK ?
+    - serviços -> centralizar e privatizar serviços
+    - tipagens -> consistentes entre os softwares
+    - mais algo que seria necessário centralizar
+- exemplo
+    - times executando a mesma função
+    - replicando código entre os projetos
+    - com SDK centraliza as operações, tendo a v2 gera uma nova versão da SDK
+
+inicializar a SDK
+- criar pasta -> mkdir alganews-sdk
+- criar projeto -> yarn init -y
+- adicionar cli do ts -> yarn global add typescript
+- adicionar ts no projeto -> yarn add -D typescript
+- adicionar arquivo ts.config.json -> tsc --init
+- fazer build do projeto -> yarn build
+
+versionamento (https://semver.org/lang/pt-BR/)
+patch -> npm version patch
+patch -> npm version minor
+patch -> npm version major
+
+criar conta no npm
+- logar via cmd -> npm login
+- fazer build do projeto -> yarn build (ou adicionar script)
+- publicar -> npm publish ou npm pu
+- pacotes privados pagos -> @dvsilva/sdk
+
+instalando a sdk
+- yarn add danielbonifacio-sdk
+- instalar versão específica -> yarn add danielbonifacio-sdk@1.2.0
+- atualizar versão -> yarn add  danielbonifacio-sdk@2.0.0
+- atualizar ultima versão -> yarn add danielbonifacio-sdk@2.7.0
+
+instalando dependências na sdk
+- yarn add axios uuid date-fns
+- yarn add @types/uuid

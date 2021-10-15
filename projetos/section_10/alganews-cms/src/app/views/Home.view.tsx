@@ -1,6 +1,8 @@
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import usePageTitle from "../../core/hooks/usePageTitle";
+import selectPaginatedPosts from "../../core/selectors/selectPaginatedPosts";
+import { RootState } from "../../core/store";
 import { addPost } from "../../core/store/Post.slice";
 import ErrorBoundary from "../components/ErrorBoundary";
 import PostList from "../features/PostsList";
@@ -51,6 +53,7 @@ const fakePost = {
 export default function Home() {
   usePageTitle("Home");
   const dispatch = useDispatch();
+  const paginatedPosts = useSelector(selectPaginatedPosts);
 
   useEffect(() => {}, [dispatch]);
 
@@ -63,6 +66,9 @@ export default function Home() {
       >
         disparar acao
       </button>
+      {paginatedPosts?.map((post) => (
+        <li>{post.title}</li>
+      ))}
       <div
         style={{
           display: "grid",

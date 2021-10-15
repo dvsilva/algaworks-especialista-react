@@ -1,0 +1,14 @@
+flux (https://facebook.github.io/flux/)
+
+problema 1 
+    - prop drilling (perfuração de propriedades) -> exemplo: carrinho de compras
+problema 2
+    - utilização de um model por mais de uma view -> exemplo: MVC
+    - geração de efeitos coleterais em uma das views a partir de mudanças no model
+
+flux 
+    - arquitetura onde seu fundamento é o fluxo unidirecional de dados (unidirectional data flow)
+    - dispacher -> store -> view -> action
+        - store -> centro de dados
+        - view > componentes react
+    - é implementada pelo redux

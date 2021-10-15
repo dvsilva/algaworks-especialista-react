@@ -41,3 +41,6 @@ reducer
 
 instalando os pacotes necessários
     - yarn add redux @reduxjs/toolkit react-redux
+
+plugin redux-dev-tools
+https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=pt-BR

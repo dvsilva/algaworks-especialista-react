@@ -10,5 +10,31 @@ flux
     - arquitetura onde seu fundamento é o fluxo unidirecional de dados (unidirectional data flow)
     - dispacher -> store -> view -> action
         - store -> centro de dados
-        - view > componentes react
+        - view > componentes React
     - é implementada pelo redux
+
+redux (https://redux.js.org/)
+    - biblioteca onpensource
+    - majoritariamente utilizada em projetos React
+    - pode ser utilizado em aplicações não-React (javascript)
+    - utilidade 
+        - aplicar flux nos projetos
+        - padronizar o código
+        - aplicar gerenciamento de estado global
+        - acabar com problemas prop drilling
+
+store 
+    - estado global
+    - acessivel por qualquer componente que pode armazenar dados da aplicação
+view
+    - interface -> seleciona os dados que precisa
+action 
+    - disparada pelas views
+    - inicio do processo de alteração no estado global da nossa store
+    - possui type e payload
+    - pode ser assíncrona (thunk)
+reducer
+    - modifica o estado
+    - identifica a ação e realiza a operação
+    - reage aos tipos de ação
+    - retorna novo estado (por inteiro) para o store e ciclo pode continuar

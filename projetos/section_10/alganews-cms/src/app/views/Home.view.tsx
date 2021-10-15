@@ -1,8 +1,7 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import usePageTitle from "../../core/hooks/usePageTitle";
 import selectPaginatedPosts from "../../core/selectors/selectPaginatedPosts";
-import { RootState } from "../../core/store";
 import { addPost } from "../../core/store/Post.slice";
 import ErrorBoundary from "../components/ErrorBoundary";
 import PostList from "../features/PostsList";
@@ -50,6 +49,17 @@ const fakePost = {
   canBeEdited: true,
 };
 
+function ComponentWithState(){
+  const [name, setName] = useState("Daniel");
+
+  return (
+    <div>
+      <h1>{name}</h1>
+      <button onClick={() => setName("José")}>mudar nome</button>
+    </div>
+  );
+}
+
 export default function Home() {
   usePageTitle("Home");
   const dispatch = useDispatch();
@@ -69,6 +79,11 @@ export default function Home() {
       {paginatedPosts?.map((post) => (
         <li>{post.title}</li>
       ))}
+      <hr />
+
+      <ComponentWithState />
+      <ComponentWithState />
+      
       <div
         style={{
           display: "grid",

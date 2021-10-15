@@ -38,3 +38,6 @@ reducer
     - identifica a ação e realiza a operação
     - reage aos tipos de ação
     - retorna novo estado (por inteiro) para o store e ciclo pode continuar
+
+instalando os pacotes necessários
+    - yarn add redux @reduxjs/toolkit react-redux

@@ -1,0 +1,49 @@
+flux (https://facebook.github.io/flux/)
+
+problema 1 
+    - prop drilling (perfuração de propriedades) -> exemplo: carrinho de compras
+problema 2
+    - utilização de um model por mais de uma view -> exemplo: MVC
+    - geração de efeitos coleterais em uma das views a partir de mudanças no model
+
+flux 
+    - arquitetura onde seu fundamento é o fluxo unidirecional de dados (unidirectional data flow)
+    - dispacher -> store -> view -> action
+        - store -> centro de dados
+        - view > componentes React
+    - é implementada pelo redux
+
+redux (https://redux.js.org/)
+    - biblioteca onpensource
+    - majoritariamente utilizada em projetos React
+    - pode ser utilizado em aplicações não-React (javascript)
+    - utilidade 
+        - aplicar flux nos projetos
+        - padronizar o código
+        - aplicar gerenciamento de estado global
+        - acabar com problemas prop drilling
+
+store 
+    - estado global
+    - acessivel por qualquer componente que pode armazenar dados da aplicação
+view
+    - interface -> seleciona os dados que precisa
+action 
+    - disparada pelas views
+    - inicio do processo de alteração no estado global da nossa store
+    - possui type e payload
+    - pode ser assíncrona (thunk) - actions creators assíncronos
+reducer
+    - modifica o estado
+    - identifica a ação e realiza a operação
+    - reage aos tipos de ação
+    - retorna novo estado (por inteiro) para o store e ciclo pode continuar
+
+instalando os pacotes necessários
+    - yarn add redux @reduxjs/toolkit react-redux
+
+plugin redux-dev-tools
+https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=pt-BR
+
+estado local -> são isolados / está dentro de um componente, que quando é desmontado esse estado é perdido
+estado global -> se mantem durante toda a execução da aplicação, independente da montagem de componentes / não é perdido quando desmonta os componentes

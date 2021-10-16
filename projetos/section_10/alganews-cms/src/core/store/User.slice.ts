@@ -5,8 +5,7 @@ import {
   isPending,
   isRejected,
 } from "@reduxjs/toolkit";
-import { User } from "../../sdk/@types";
-import UserService from "../../sdk/services/User.service";
+import { User, UserService } from "danielbonifacio-sdk";
 
 export const fetchEditors = createAsyncThunk(
   "user/fetchEditors",

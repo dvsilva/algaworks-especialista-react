@@ -1,6 +1,6 @@
+import { Post } from "danielbonifacio-sdk";
 import { useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Post } from "../../sdk/@types";
 import selectPaginatedPosts from "../selectors/selectPaginatedPosts";
 import selectPostsFetching from "../selectors/selectPostsFetching";
 import * as PostActions from "../store/Post.slice";

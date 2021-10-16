@@ -1,5 +1,5 @@
-import { getEditorDescription, User, UserService } from "danielbonifacio-sdk";
-import { useEffect, useState } from "react";
+import { getEditorDescription } from "danielbonifacio-sdk";
+import { useEffect } from "react";
 import Skeleton from "react-loading-skeleton";
 import styled from "styled-components";
 import useEditors from "../../core/hooks/useEditors";

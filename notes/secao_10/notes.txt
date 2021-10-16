@@ -32,7 +32,7 @@ action
     - disparada pelas views
     - inicio do processo de alteração no estado global da nossa store
     - possui type e payload
-    - pode ser assíncrona (thunk)
+    - pode ser assíncrona (thunk) - actions creators assíncronos
 reducer
     - modifica o estado
     - identifica a ação e realiza a operação

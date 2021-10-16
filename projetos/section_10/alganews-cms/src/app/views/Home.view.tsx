@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import usePageTitle from "../../core/hooks/usePageTitle";
 import selectPaginatedPosts from "../../core/selectors/selectPaginatedPosts";
-import { addPost } from "../../core/store/Post.slice";
+import { addPost, fetchPosts } from "../../core/store/Post.slice";
 import ErrorBoundary from "../components/ErrorBoundary";
 import PostList from "../features/PostsList";
 import UserEarnings from "../features/UserEarnings";
@@ -49,17 +49,6 @@ const fakePost = {
   canBeEdited: true,
 };
 
-function ComponentWithState(){
-  const [name, setName] = useState("Daniel");
-
-  return (
-    <div>
-      <h1>{name}</h1>
-      <button onClick={() => setName("José")}>mudar nome</button>
-    </div>
-  );
-}
-
 export default function Home() {
   usePageTitle("Home");
   const dispatch = useDispatch();
@@ -71,7 +60,7 @@ export default function Home() {
     <DefaultLayout>
       <button
         onClick={() => {
-          dispatch(addPost(fakePost));
+          dispatch(fetchPosts({ page: 2 }));
         }}
       >
         disparar acao
@@ -80,10 +69,6 @@ export default function Home() {
         <li>{post.title}</li>
       ))}
       <hr />
-
-      <ComponentWithState />
-      <ComponentWithState />
-      
       <div
         style={{
           display: "grid",

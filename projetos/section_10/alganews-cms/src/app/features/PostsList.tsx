@@ -1,12 +1,13 @@
 import { mdiOpenInNew } from "@mdi/js";
 import Icon from "@mdi/react";
-import { Post, PostService } from "danielbonifacio-sdk";
+import { Post } from "danielbonifacio-sdk";
 import { format } from "date-fns";
 import { useState } from "react";
 import { useEffect } from "react";
 import { useMemo } from "react";
 import Skeleton from "react-loading-skeleton";
 import { Column, usePagination, useTable } from "react-table";
+import usePosts from "../../core/hooks/usePosts";
 import modal from "../../core/utils/modal";
 import Loading from "../components/Loading";
 import PostTitleAnchor from "../components/PostTitleAnchor";
@@ -14,27 +15,17 @@ import Table from "../components/Table/Table";
 import PostPreview from "./PostPreview";
 
 export default function PostList() {
-  const [posts, setPosts] = useState<Post.Paginated>();
-  const [error, setError] = useState<Error>();
+  const { loading, paginatedPosts, fetchPosts } = usePosts();
   const [page, setPage] = useState(0);
-  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    setLoading(true);
-    PostService.getAllPosts({
+    fetchPosts({
       page,
       size: 7,
       showAll: true,
       sort: ["createdAt", "desc"],
-    })
-      .then(setPosts)
-      .catch((error) => setError(new Error(error.message)))
-      .then(() => {
-        setLoading(false);
-      });
-  }, [page]);
-
-  if (error) throw error;
+    });
+  }, [fetchPosts, page]);
 
   const columns = useMemo<Column<Post.Summary>[]>(
     () => [
@@ -125,16 +116,16 @@ export default function PostList() {
 
   const instance = useTable<Post.Summary>(
     {
-      data: posts?.content || [],
+      data: paginatedPosts?.content || [],
       columns,
       manualPagination: true,
       initialState: { pageIndex: 0 },
-      pageCount: posts?.totalPages,
+      pageCount: paginatedPosts?.totalPages,
     },
     usePagination
   );
 
-  if (!posts)
+  if (!paginatedPosts)
     return (
       <div>
         <Skeleton height={32} />

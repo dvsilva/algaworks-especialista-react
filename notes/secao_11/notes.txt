@@ -24,3 +24,6 @@ next cli
 links
 https://danielbonifacio.notion.site/Documentos-8dca4ded101d42478b6bc2f2c7a0fb46?v=1
 https://nextjs.org/docs/api-reference/cli
+
+plugins
+CSS Modules

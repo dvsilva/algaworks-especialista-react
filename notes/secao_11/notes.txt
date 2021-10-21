@@ -21,9 +21,15 @@ next cli
     - yarn create next-app alganews-blog --template typescript
 - rodar projeto -> yarn dev
 
+dependencias
+yarn add styled-components
+yarn add -D @types/styled-components
+yarn add babel-plugin-styled-components
+
 links
 https://danielbonifacio.notion.site/Documentos-8dca4ded101d42478b6bc2f2c7a0fb46?v=1
 https://nextjs.org/docs/api-reference/cli
+https://nextjs.org/docs/basic-features/pages#server-side-rendering
 
 plugins
 CSS Modules
